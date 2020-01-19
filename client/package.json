@@ -1,0 +1,41 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
+  "cordovaId": "org.cordova.quasar.app",
+  "capacitorId": "",
+  "author": "Luis Fernando Flores dos Santos <luis.santos@govbr.com.br>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "cls && quasar dev"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "brazilian-values": "^0.7.0",
+    "fuse.js": "^3.4.3",
+    "quasar": "^1.0.0",
+    "vue-async-data-2": "0.0.2",
+    "vuelidate": "^0.7.4"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "quasar-app-extension-qdatetimepicker": "^1.0.0-rc.9"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}

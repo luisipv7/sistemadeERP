@@ -1,0 +1,64 @@
+{
+  "name": "produto",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "quantidade": {
+      "type": "number",
+      "required": true
+    },
+    "codBarras": {
+      "type": "string"
+    },
+    "nomeProduto": {
+      "type": "string",
+      "required": true
+    },
+    "precoCompra": {
+      "type": "number",
+      "required": true
+    },
+    "precoVenda": {
+      "type": "number",
+      "required": true
+    },
+    "nomeFornecedor": {
+      "type": "string"
+    },
+    "validadeProd": {
+      "type": "date"
+    },
+    "vendaForma": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "exportarpdf": {
+      "accepts": [
+        {
+          "arg": "exportarpdf",
+          "type": "object",
+          "required": true,
+          "description": "exportarpdf",
+          "http": {
+            "source": "context"
+          }
+        }
+      ],
+      "returns": [],
+      "description": "Exportar lista de Produtos para PDF",
+      "http": [
+        {
+          "path": "/exportarpdf",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}
