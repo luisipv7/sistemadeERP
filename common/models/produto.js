@@ -51,7 +51,7 @@ module.exports = function(Produto) {
         (Response, next) => {
           const ejsFilename = path.join(__dirname, '/../templates/rel001.ejs');
           const data = {
-            title: 'Relação de Contatos',
+            title: 'Relação de Produtos',
             tabela: tableify(Response),
           };
           ejs.renderFile(ejsFilename, data, next);

@@ -12,6 +12,9 @@
           label="Informe Nome e ou Código de Barras do Item"
         />
       </q-card-section>
+      <q-card-section v-if="this.form.item.length > 0">
+        {{ result}}
+      </q-card-section>
     </div>
   </q-page>
 </template>
@@ -22,7 +25,8 @@ export default {
     return {
       form: {
         item: ''
-      }
+      },
+      result : {}
     }
   },
   methods: {
@@ -47,7 +51,8 @@ export default {
         keys: ['nomeProduto', 'quantidade', 'precoVenda', 'validadeProd', 'vendaForma']
       }
       const fuse = new Fuse(this.BuscaProd, options)
-      return this.form.item ? fuse.search(this.form.item): '';
+      this.result = fuse.search(this.form.item)
+      // return this.form.item ? fuse.search(this.form.item): '';
     }
   },
 }
